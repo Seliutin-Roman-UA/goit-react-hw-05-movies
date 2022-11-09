@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { MovieGallery } from 'components/MovieGallery/MovieGallery';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import css from './MoviesPage.module.css';
 
 export function MoviesPage() {
