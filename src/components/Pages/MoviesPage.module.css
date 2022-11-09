@@ -1,0 +1,21 @@
+.searchForm {
+  margin-top: 10px;
+}
+.formButton {
+  margin-top: 10px;
+  color: rgb(39, 108, 171);
+  background-color: rgb(255, 255, 255);
+  border: none;
+  text-align: start;
+  width: calc(100% - 172px);
+  padding: 3px;
+}
+.formButton:hover {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(39, 108, 171, 1) 5%,
+    15%,
+    rgba(255, 255, 255) 50%
+  );
+}

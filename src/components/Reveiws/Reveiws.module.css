@@ -1,0 +1,14 @@
+.author {
+  font-size: 16px;
+  font-weight: 700;
+}
+.content {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.data {
+  font-size: 11px;
+  }
+.reviews {
+    border-bottom: 0.5px solid ;
+}

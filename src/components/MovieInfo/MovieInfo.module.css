@@ -1,0 +1,75 @@
+.movieCard {
+  display: flex;
+  margin-top: 0px;
+}
+.movieButon {
+  margin-top: 15px;
+  color: rgb(39, 108, 171);
+  background-color: rgb(255, 255, 255);
+  border: none;
+  text-align: start;
+  width: 50%;
+  padding: 3px;
+}
+.movieButon:hover {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(39, 108, 171, 1) 10%,
+    20%,
+    rgba(255, 255, 255) 50%
+  );
+}
+.buttonCaption{
+  display: flex; align-items: center;
+}
+
+
+.movieImg {
+  width: 250px;
+  height: 100%;
+  display: block;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+}
+.movieName {
+  font-weight: 700;
+}
+.movieInfoWrap {
+  margin-left: 10px;
+}
+.movieCaption {
+  font-size: 14px;
+  font-weight: 700;
+}
+.movieText {
+  font-size: 12px;
+  font-weight: 400;
+}
+.addinfo {
+  font-size: 12px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0px 6px 6px -6px rgba(39, 108, 171, 0.8),
+    0px -6px 6px -6px rgba(39, 108, 171, 0.8);
+}
+.addlink {
+  margin-top: 12px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 2px;
+}
+.addlink + .addlink {
+  margin-top: 4px;
+}
+.addlink:hover {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(39, 108, 171, 1) 5%,
+    15%,
+    rgba(255, 255, 255) 50%
+  );
+}

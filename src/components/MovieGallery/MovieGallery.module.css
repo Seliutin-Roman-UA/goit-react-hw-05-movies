@@ -1,0 +1,30 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 0;
+}
+.movieCard {
+  width: 114px;
+  box-shadow: -1px 8px 5px -2px rgba(39, 108, 171, 0.8);
+
+}
+.movieLink{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.movieImg {
+  width: 100%;
+  height: auto;
+}
+.movieCaption {
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+}
+.movieCaption + .movieCaption {
+  margin-top: auto;
+}
