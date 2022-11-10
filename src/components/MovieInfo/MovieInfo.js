@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import css from './MovieInfo.module.css';
 import { RiArrowLeftSFill } from 'react-icons/ri';
+import { Suspense } from 'react';
 
 export function MovieInfo({ movie }) {
   const location = useLocation();
@@ -11,7 +12,8 @@ export function MovieInfo({ movie }) {
     <>
       <button className={css.movieButon} type="button">
         <Link to={prevLocation} className={css.buttonCaption}>
-          <RiArrowLeftSFill />Go back
+          <RiArrowLeftSFill />
+          Go back
         </Link>
       </button>
       <div className={css.movieCard}>
@@ -43,7 +45,9 @@ export function MovieInfo({ movie }) {
           Reveiws
         </Link>
       </div>
-      <Outlet />
+      <Suspense fallback={<div>Loading page...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

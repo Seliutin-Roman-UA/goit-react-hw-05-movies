@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import css from './Header.module.css';
 
@@ -23,7 +24,9 @@ export function Header() {
           Movies
         </NavLink>
       </nav>
-      <Outlet />
+      <Suspense fallback={<div>Loading page...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 }

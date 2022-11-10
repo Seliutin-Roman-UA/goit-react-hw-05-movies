@@ -1,10 +1,22 @@
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Cast } from './Cast/Cast';
 import { Header } from './Header/Header';
-import { HomePage } from './Pages/HomePage';
-import { MoviesPage } from './Pages/MoviesPage';
-import { OneMoviePage } from './Pages/OneMoviePage';
-import { Reveiws } from './Reveiws/Reveiws';
+
+//import { Cast } from './Cast/Cast';
+//import { HomePage } from './Pages/HomePage';
+//import { MoviesPage } from './Pages/MoviesPage';
+//import { OneMoviePage } from './Pages/OneMoviePage';
+//import { Reveiws } from './Reveiws/Reveiws';
+
+
+const Cast = lazy(() => import('./Cast/Cast'));
+const HomePage = lazy(() => import('./Pages/HomePage'));
+const MoviesPage = lazy(() => import('./Pages/MoviesPage'));
+const OneMoviePage = lazy(() => import('./Pages/OneMoviePage'));
+const Reveiws = lazy(() => import('./Reveiws/Reveiws'));
+
+
+
 
 export const App = () => {
   return (
