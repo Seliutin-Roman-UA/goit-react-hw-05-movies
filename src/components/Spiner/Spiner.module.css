@@ -19,6 +19,8 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   fill: #276cabcc;
+  width: 100%;
+  height: auto;
 }
 
 @keyframes spin {
