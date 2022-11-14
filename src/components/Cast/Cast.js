@@ -35,19 +35,21 @@ function Cast() {
     <>
       <ul className={css.actorGallery}>
         {actors.map(({ character, name, profile_path, cast_id }) => (
-          <li key={cast_id} className={css.actorCard}>
-            <img
-              className={css.actorImg}
-              src={
-                profile_path !== null
-                  ? `https://image.tmdb.org/t/p/w185${profile_path}`
-                  : nofoto
-              }
-              alt=""
-            />
-            <p className={css.actorCaption}>Name: {name}</p>
-            <p className={css.actorCaption}>Character: {character}</p>
-          </li>
+          <a key={cast_id} href={`https://www.google.com/search?q=` + name} target="blank ">
+            <li  className={css.actorCard}>
+              <img
+                className={css.actorImg}
+                src={
+                  profile_path !== null
+                    ? `https://image.tmdb.org/t/p/w185${profile_path}`
+                    : nofoto
+                }
+                alt=""
+              />
+              <p className={css.actorCaption}>Name: {name}</p>
+              <p className={css.actorCaption}>Character: {character}</p>
+            </li>
+          </a>
         ))}
       </ul>
       {spiner && <Spiner />}
