@@ -7,19 +7,21 @@ import { useSearchParams } from 'react-router-dom';
 function HomePage() {
   const [movies, setMovies] = useState([]);
   const [spiner, setSpiner] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams({ page: 1 });
 
   const currentPage = searchParams.get('page')
     ? Number(searchParams.get('page'))
     : 1;
   const maxPage = useRef(1);
 
-
-  const setCurrentPage = a => {
-    setSearchParams({ page: currentPage + a });
+  const setCurrentPage =newpage => {
+    console.log('currentPage    === ', currentPage);
+     console.log('newpage    === ', typeof newpage);
+    setSearchParams({ page: String(newpage) });
   };
 
   useEffect(() => {
+    console.log('currentPage    === ', currentPage);
     setSpiner(true);
     fetch(
       `https://api.themoviedb.org/3/trending/movie/day?api_key=09fddff29ca445d38e447ae99342142f&page=${currentPage}`

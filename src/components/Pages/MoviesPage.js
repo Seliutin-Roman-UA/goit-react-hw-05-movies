@@ -15,8 +15,8 @@ export function MoviesPage() {
     : 1;
   const maxPage = useRef(1);
 
-  const setCurrentPage = a => {
-    setSearchParams({ page: currentPage + a, query });
+  const setCurrentPage = newpage => {
+    setSearchParams({ page: newpage, query });
   };
 
   const changeQuery = e => {
